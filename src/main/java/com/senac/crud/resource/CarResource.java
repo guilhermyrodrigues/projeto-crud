@@ -19,7 +19,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping(value = "/api/v1/cars")
-@Tag(name = "user", description = "Documentação relacionada a resource(recurso) car")
+@Tag(name = "car", description = "Documentação relacionada a resource(recurso) car")
 public class CarResource {
 
     final CarService carService;
@@ -32,8 +32,7 @@ public class CarResource {
     )
     @Operation(
             summary = "Cria um carro",
-            description = "Método responsável para criar um carro no sistema",
-            tags = {"carro"})
+            description = "Método responsável para criar um carro no sistema")
     @ApiResponses({
             @ApiResponse(responseCode = "201", content = { @Content(schema = @Schema(implementation = CarModel.class), mediaType = MediaType.APPLICATION_JSON_VALUE) }),
             @ApiResponse(responseCode = "303", content = { @Content(schema = @Schema()) }),
@@ -50,8 +49,7 @@ public class CarResource {
     )
     @Operation(
             summary = "Recupera um carro baseado em um identificador",
-            description = "Método responsável para recuperar um carro no sistema baseado no identificador",
-            tags = {"carro"})
+            description = "Método responsável para recuperar um carro no sistema baseado no identificador")
     @ApiResponses({
             @ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = CarModel.class), mediaType = MediaType.APPLICATION_JSON_VALUE) }),
             @ApiResponse(responseCode = "303", content = { @Content(schema = @Schema()) }),
@@ -65,8 +63,7 @@ public class CarResource {
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
     @Operation(
             summary = "Recupera uma lista de carros",
-            description = "Método responsável para recuperar uma lista de carros",
-            tags = {"carro"})
+            description = "Método responsável para recuperar uma lista de carros")
     @ApiResponses({
             @ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = CarModel.class), mediaType = MediaType.APPLICATION_JSON_VALUE) }),
             @ApiResponse(responseCode = "303", content = { @Content(schema = @Schema()) }),
@@ -83,8 +80,7 @@ public class CarResource {
     )
     @Operation(
             summary = "Atualiza todos os dados de um carro",
-            description = "Método responsável para atualizar todos os dados de um carro.",
-            tags = {"carro"})
+            description = "Método responsável para atualizar todos os dados de um carro.")
     @ApiResponses({
             @ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = CarModel.class), mediaType = MediaType.APPLICATION_JSON_VALUE) }),
             @ApiResponse(responseCode = "303", content = { @Content(schema = @Schema()) }),
@@ -98,8 +94,7 @@ public class CarResource {
     @DeleteMapping(value = "/{id}")
     @Operation(
             summary = "Delete um carro com base no identificador.",
-            description = "Método responsável para deletar um carro com base no identificador.",
-            tags = {"aluno"})
+            description = "Método responsável para deletar um carro com base no identificador.")
     @ApiResponses({
             @ApiResponse(responseCode = "206", content = { @Content(schema = @Schema(implementation = CarModel.class), mediaType = MediaType.APPLICATION_JSON_VALUE) }),
             @ApiResponse(responseCode = "303", content = { @Content(schema = @Schema()) }),
