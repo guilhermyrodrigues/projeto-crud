@@ -14,6 +14,12 @@ application:
   title: ${project.name}
   version: ${project.version}
 
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
 spring:
   output:
     ansi:
